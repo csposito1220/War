@@ -39,9 +39,25 @@ function getValue(card) {
 
   if (isNaN(value)) {
     if (value === "A") {
-      return 11;
-    } else {
-      return 10;
+      return 14;
     }
+    if (value === "K") {
+      return 13;
+    }
+    if (value === "Q") {
+      return 12;
+    } else {
+      return 11;
+    }
+  }
+  return parseInt(value);
+}
+
+function shuffleDeck() {
+  for (let i = 0; i < deck.length; i++) {
+    let j = Math.floor(Math.random() * deck.length);
+    let temp = deck[i];
+    deck[i] = deck[j];
+    deck[j] = temp;
   }
 }
