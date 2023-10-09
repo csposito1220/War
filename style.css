@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+
+#game-container {
+  display: grid;
+  grid-template-columns: repeat(3, 33.3%);
+  height: 70vw;
+  width: 70vw;
+  border: solid 5px black;
+  margin: auto;
+  background-color: rgb(89, 184, 89);
+  border-radius: 10%;
+  background-image: url(/assets/green\ felt.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4.5vh;
+  margin: 5px;
+}
+
+#card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 70vw;
+  width: 20vw;
+}
+
+.card-slot {
+  border: solid 1px black;
+  height: 14vw;
+  width: 10vw;
+  border-radius: 10%;
+}
+
+#comp-deck {
+  background-image: url(/assets/dragonback.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#player-deck {
+  background-image: url(/assets/dragonback.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#counter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  font-size: 2vw;
+  border: solid 1px black;
+  border-radius: 10px;
+  background-color: rgba(240, 248, 255, 0.762);
+  margin-right: 10px;
+}
+
+.counter {
+  border: solid 1px blue;
+  height: 6vw;
+  width: 6vw;
+  border-radius: 10%;
+  margin: 10px 0px 10px 0px;
+  background-color: rgba(240, 248, 255, 0.762);
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#left-border {
+  background-image: url(/assets/suitsleft.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(45deg);
+  height: 60vw;
+  width: 50vw;
+}
+
+#comp-card {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#player-card {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-value {
+  border: solid 1px black;
+  height: 70%;
+  width: 70%;
+  margin: auto;
+}
+
+.card-suit {
+  border: solid 1px black;
+  height: 25%;
+  width: 25%;
+  margin: auto;
+}

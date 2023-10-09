@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>This is WAR!!</title>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <h1>This is WAR!!</h1>
+    <div id="game-container">
+      <div class="empty">
+        <div id="left-border"></div>
+      </div>
+      <div id="card-container">
+        <div id="comp-deck" class="card-slot"></div>
+        <div id="comp-card" class="card-slot">
+          <div class="card-value"></div>
+          <div class="card-suit"></div>
+        </div>
+        <div id="player-card" class="card-slot">
+          <div class="card-suit"></div>
+          <div class="card-value"></div>
+        </div>
+        <div id="player-deck" class="card-slot"></div>
+      </div>
+      <div id="counter-container">
+        <div class="counter"></div>
+        <h3 id="status-text">Winner</h3>
+        <div class="counter"></div>
+      </div>
+    </div>
+  </body>
+</html>
