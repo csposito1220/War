@@ -5,7 +5,6 @@ let player1Deck = document.querySelector("#player-deck");
 let cardValue = document.querySelectorAll(".card-value");
 let cardSuit = document.querySelectorAll(".card-suit");
 const startGameBtn = document.getElementById("start-game");
-const restartBtn = document.getElementById("restart");
 
 const suits = ["♠", "♣", "♥", "♦"];
 const values = [
@@ -24,7 +23,7 @@ const values = [
   "K",
 ];
 
-let deck = [];
+const deck = [];
 
 let rounds = 0;
 
@@ -65,11 +64,6 @@ function shuffleDeck(deck) {
   console.log(deck);
 }
 startGameBtn.addEventListener("click", function () {
-  startGame();
-});
-
-restartBtn.addEventListener("click", function () {
-  restartGame();
   startGame();
 });
 
