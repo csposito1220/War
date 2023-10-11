@@ -118,6 +118,15 @@ h3 {
   background-color: rgba(222, 39, 39);
   cursor: pointer;
 }
+
+#check-winner {
+  font-size: 2vw;
+  border: solid 1px black;
+  border-radius: 10px;
+  background-color: rgba(240, 248, 255);
+  cursor: pointer;
+}
+
 /* #left-border {
   background-image: url(/assets/suitsleft.png);
   background-size: contain;
