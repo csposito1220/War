@@ -1,7 +1,7 @@
-* {
+/* * {
   box-sizing: border-box;
   text-align: center;
-}
+} */
 
 #game-container {
   display: grid;
