@@ -95,6 +95,8 @@ function startGame() {
   shuffleDeck(deck);
   player1Deck = deck.slice(0, 26);
   computerDeck = deck.slice(26);
+  document.getElementById("player-counter").innerHTML = player1Deck.length;
+  document.getElementById("comp-counter").innerHTML = computerDeck.length;
 
   console.log(player1Deck);
   console.log(computerDeck);
@@ -105,27 +107,24 @@ function flipCard() {
   computerCard = computerDeck.pop();
   console.log(playerCard);
   console.log(computerCard);
-
-  playerCardSlot.append(playerCard);
-  compCardSlot.append(computerCard);
   stop;
-  // getImage();
+  document.querySelector("#status-text").innerHTML = "";
+  getImage();
 }
 
-// function getImage(card) {
-//   let cardImg = document.createElement("img");
-//   cardImg.src = `./assets/cards/${card}.png`;
-//   if (player === "player1") {
-//     playerCardSlot.appendChild(cardImg);
-//   } else if (player === "computer") {
-//     compCardSlot.appendChild(cardImg);
-//   }
-// }
+function getImage() {
+  let playerCardImg = document.createElement("img");
+  playerCardImg.src = `./assets/cards/${playerCard}.png`;
+  playerCardSlot.appendChild(playerCardImg);
+
+  let computerCardImg = document.createElement("img");
+  computerCardImg.src = `./assets/cards/${computerCard}.png`;
+  compCardSlot.appendChild(computerCardImg);
+}
 
 function checkWinner() {
   const playerCardValue = getValue(playerCard);
   const computerCardValue = getValue(computerCard);
-  // getValue(playerCard);
   if (playerCardValue > computerCardValue) {
     player1Deck.unshift(playerCard, computerCard);
     console.log(player1Deck, "player");
@@ -133,37 +132,16 @@ function checkWinner() {
     computerDeck.unshift(playerCard, computerCard);
     console.log(computerDeck, "comp");
   } else {
-    const pot = [playerCard, computerCard];
-    let warWinner = null;
-
-    while (!warWinner) {
-      const card1War = player1Deck.pop();
-      const card2War = computerDeck.pop();
-      pot.unshift(card1War, card2War);
-
-      if (card1War && card2War) {
-        if (values.indexOf(card1War.value) > values.indexOf(card2War.value)) {
-          warWinner = "player1";
-        } else if (
-          values.indexOf(card1War.value) < values.indexOf(card2War.value)
-        ) {
-          warWinner = "computer";
-        }
-      } else {
-        // If one of the players runs out of cards during the war
-        warWinner = card1War ? "player1" : "computer";
-        break;
-      }
-    }
-
-    if (warWinner === "player1") {
-      player1Deck.unshift(...pot);
-    } else {
-      computerDeck.unshift(...pot);
-    }
+    player1Deck.unshift(playerCard);
+    computerDeck.unshift(computerCard);
+    console.log("Draw");
   }
-
-  displayWinner(player1Deck.length, computerDeck.length);
+  document.getElementById("player-counter").innerHTML = player1Deck.length;
+  document.getElementById("comp-counter").innerHTML = computerDeck.length;
+  if (rounds === 4) {
+    displayWinner();
+  } else {
+  }
   rounds++;
 }
 
@@ -173,14 +151,16 @@ function restartGame() {
   computerDeck = [];
   playerCardSlot.innerHTML = [];
   compCardSlot.innerHTML = [];
+  document.querySelector("#status-text").innerHTML = "";
+  rounds = 0;
 }
 
-function displayWinner(player1Cards, computerCards) {
-  if (player1Cards > computerCards) {
-    document.querySelector("status-text").innerHTML = "Player1 Wins!";
-  } else if (player1Cards < computerCards) {
-    document.querySelector("status-text").innerHTML = "Computer Wins!";
+function displayWinner() {
+  if (player1Deck.length > computerDeck.length) {
+    document.querySelector("#status-text").innerHTML = "Player1 Wins!";
+  } else if (player1Deck.length < computerDeck.length) {
+    document.querySelector("#status-text").innerHTML = "Computer Wins!";
   } else {
-    document.querySelector("status-text").innerHTML = "Draw";
+    document.querySelector("#status-text").innerHTML = "Draw";
   }
 }

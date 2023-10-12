@@ -39,6 +39,16 @@ h1 {
   border-radius: 10%;
 }
 
+#player-card img {
+  height: 100%;
+  width: 100%;
+}
+
+#comp-card img {
+  height: 100%;
+  width: 100%;
+}
+
 #comp-deck {
   background-image: url(/assets/dragonback.png);
   background-size: cover;
@@ -126,27 +136,3 @@ h3 {
   background-color: rgba(240, 248, 255);
   cursor: pointer;
 }
-
-/* #left-border {
-  background-image: url(/assets/suitsleft.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  transform: rotate(45deg);
-  height: 60vw;
-  width: 50vw;
-} */
-
-/* .card-value {
-  border: solid 1px black;
-  height: 70%;
-  width: 70%;
-  margin: auto;
-}
-
-.card-suit {
-  border: solid 1px black;
-  height: 25%;
-  width: 25%;
-  margin: auto;
-} */
