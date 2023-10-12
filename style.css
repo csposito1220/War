@@ -50,7 +50,7 @@ h1 {
 }
 
 .deck-slot {
-  background-image: url(/assets/dragonback.png);
+  background-image: url("./assets/dragonback.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
