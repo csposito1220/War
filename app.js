@@ -7,6 +7,9 @@ let cardSuit = document.querySelectorAll(".card-suit");
 const startGameBtn = document.getElementById("start-game");
 const restartBtn = document.getElementById("restart");
 const checkWinnerBtn = document.getElementById("check-winner");
+document.getElementById("comp-card").style.visibility = "hidden";
+document.getElementById("player-card").style.visibility = "hidden";
+document.getElementById("status-text").style.visibility = "hidden";
 
 const suits = ["S", "C", "H", "D"];
 const values = [
@@ -97,6 +100,8 @@ function startGame() {
   computerDeck = deck.slice(26);
   document.getElementById("player-counter").innerHTML = player1Deck.length;
   document.getElementById("comp-counter").innerHTML = computerDeck.length;
+  document.getElementById("comp-card").style.visibility = "hidden";
+  document.getElementById("status-text").style.visibility = "hidden";
 
   console.log(player1Deck);
   console.log(computerDeck);
@@ -110,6 +115,8 @@ function flipCard() {
   stop;
   document.querySelector("#status-text").innerHTML = "";
   getImage();
+  document.getElementById("comp-card").style.visibility = "visible";
+  document.getElementById("player-card").style.visibility = "visible";
 }
 
 function getImage() {
@@ -142,6 +149,9 @@ function checkWinner() {
     displayWinner();
   } else {
   }
+  document.getElementById("comp-card").style.visibility = "hidden";
+  document.getElementById("player-card").style.visibility = "hidden";
+
   rounds++;
 }
 
@@ -156,6 +166,8 @@ function restartGame() {
 }
 
 function displayWinner() {
+  document.getElementById("status-text").style.visibility = "visible";
+
   if (player1Deck.length > computerDeck.length) {
     document.querySelector("#status-text").innerHTML = "Player1 Wins!";
   } else if (player1Deck.length < computerDeck.length) {
