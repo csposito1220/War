@@ -12,7 +12,7 @@
   margin: auto;
   background-color: rgb(89, 184, 89);
   border-radius: 10%;
-  background-image: url(/assets/green\ felt.jpeg);
+  background-image: url("./assets/green\ felt.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
 }
