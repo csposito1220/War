@@ -31,6 +31,10 @@ A player wins when one of the following conidtions are met:
 
 I plan to add animations of the cards moving from the deck to the middle and then back again.
 
+Add a background song either War by Edwinn Star or This is War by 30 seconds to Mars
+
+Add background image to make it look like a table at a casino.
+
 
 # Challenging Challenge
 
