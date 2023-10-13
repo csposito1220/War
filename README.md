@@ -27,4 +27,13 @@ A player wins when one of the following conidtions are met:
 
 ![image](https://github.com/csposito1220/War/assets/118031693/385ab63b-9e4b-4aaa-927c-b1dffcabc967)
 
+# Future Plans
 
+I plan to add animations of the cards moving from the deck to the middle and then back again.
+
+
+# Challenging Challenge
+
+This was a peice of challenging code.  I was having trouble getting the function to get the value of the selected card to determine the winner.
+
+![image](https://github.com/csposito1220/War/assets/118031693/a13759c7-9af5-4dd0-bee3-a38ef9cde331)
